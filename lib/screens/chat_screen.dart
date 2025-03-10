@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:chatter/widgets/list_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -5,6 +6,7 @@ import '../blocs/message_bloc.dart';
 import '../widgets/chat_message_list.dart';
 import '../widgets/chat_input_field.dart';
 
+@RoutePage()
 class ChatScreen extends StatelessWidget {
   final String chatId;
   final String firstName;
