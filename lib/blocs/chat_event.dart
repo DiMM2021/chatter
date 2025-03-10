@@ -15,3 +15,19 @@ class UpdateChat extends ChatEvent {
   UpdateChat(this.chat);
 }
 
+class UpdateLastMessage extends ChatEvent {
+  final String chatId;
+  final String lastMessage;
+  final DateTime lastMessageTime;
+
+  UpdateLastMessage({
+    required this.chatId,
+    required this.lastMessage,
+    required this.lastMessageTime,
+  });
+}
+
+class SearchChats extends ChatEvent {
+  final String query;
+  SearchChats(this.query);
+}

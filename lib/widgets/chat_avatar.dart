@@ -62,8 +62,8 @@ class ChatAvatar extends StatelessWidget {
 
   String _getInitials(String fullName) {
     List<String> names = fullName.trim().split(" ");
-    String initials = names.isNotEmpty ? names[0][0].toUpperCase() : "";
-    if (names.length > 1) {
+    String initials = names[0].isNotEmpty ? names[0][0].toUpperCase() : "";
+    if (names.length > 1 && names[1].isNotEmpty) {
       initials += names[1][0].toUpperCase();
     }
     return initials;

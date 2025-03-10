@@ -31,9 +31,8 @@ class Message extends HiveObject {
   @HiveField(8)
   final String? imagePath;
 
-@HiveField(9)
+  @HiveField(9)
   final String? audioPath;
-
 
   Message({
     required this.text,

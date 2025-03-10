@@ -5,7 +5,8 @@ sealed class MessageEvent {}
 
 class LoadMessages extends MessageEvent {
   final String chatId;
-  LoadMessages(this.chatId);
+
+  LoadMessages({required this.chatId});
 }
 
 class SendMessage extends MessageEvent {
@@ -13,3 +14,7 @@ class SendMessage extends MessageEvent {
   final Message message;
   SendMessage(this.chatId, this.message);
 }
+
+class StartRecording extends MessageEvent {}
+
+class StopRecording extends MessageEvent {}

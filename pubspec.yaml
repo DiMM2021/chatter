@@ -45,6 +45,7 @@ dependencies:
   permission_handler: ^11.4.0
   record: ^5.2.1
   audioplayers: ^6.2.0
+  equatable: ^2.0.7
 
 dev_dependencies:
   flutter_test:

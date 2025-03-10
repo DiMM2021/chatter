@@ -1,3 +1,4 @@
+import 'package:chatter/blocs/audio_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -18,17 +19,14 @@ void main() async {
     Hive.registerAdapter(MessageAdapter());
   }
 
-  //Hive.deleteBoxFromDisk('messages');
-  //Hive.deleteBoxFromDisk('chats');
-
   final chatBox = await Hive.openBox<Chat>('chats');
   final messageBox = await Hive.openBox<Message>('messages');
 
   final chatBloc = ChatBloc(chatBox)..add(LoadChats());
-
   runApp(
     MultiBlocProvider(
       providers: [
+        BlocProvider(create: (context) => AudioCubit()),
         BlocProvider(create: (context) => chatBloc),
         BlocProvider(
             create: (context) => MessageBloc(messageBox, chatBox, chatBloc)),
