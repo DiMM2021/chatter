@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "822868247787",
+    "project_id": "auth-f41f7",
+    "storage_bucket": "auth-f41f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822868247787:android:0f2502d5ed88ddf1942aae",
+        "android_client_info": {
+          "package_name": "kz.maestrostudio.chatter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw-zTdOKwCXeKLECwmBllbWtZKSp0HReY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

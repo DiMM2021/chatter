@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import '../widgets/search_bar.dart';
 import '../theme/theme.dart';
+import '../widgets/logout_button.dart'; 
 
 class ChatAppBar extends StatelessWidget {
   final ValueNotifier<String> searchQueryNotifier;
 
-  const ChatAppBar(
-      {super.key,
-      required this.searchQueryNotifier,
-      required String firstName});
+  const ChatAppBar({
+    super.key,
+    required this.searchQueryNotifier,
+    required String firstName,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,9 @@ class ChatAppBar extends StatelessWidget {
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
+      actions: const [
+        LogoutButton(), // Добавил кнопку выхода
+      ],
       floating: true,
       pinned: true,
       expandedHeight: 125.0,

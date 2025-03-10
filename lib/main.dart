@@ -1,4 +1,7 @@
 import 'package:chatter/blocs/audio_cubit.dart';
+import 'package:chatter/blocs/auth_bloc.dart';
+import 'package:chatter/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -9,7 +12,10 @@ import 'package:chatter/blocs/chat_bloc.dart';
 import 'package:chatter/blocs/message_bloc.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(); 
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
   await Hive.initFlutter();
 
   if (!Hive.isAdapterRegistered(0)) {
@@ -19,6 +25,7 @@ void main() async {
     Hive.registerAdapter(MessageAdapter());
   }
 
+
   final chatBox = await Hive.openBox<Chat>('chats');
   final messageBox = await Hive.openBox<Message>('messages');
 
@@ -26,6 +33,7 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
+        BlocProvider(create: (context) => AuthBloc()),
         BlocProvider(create: (context) => AudioCubit()),
         BlocProvider(create: (context) => chatBloc),
         BlocProvider(
