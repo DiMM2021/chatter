@@ -1,16 +1,43 @@
-# chatter
+# Chatter
 
-A new Flutter project.
+Прототип мессенджера на Flutter с использованием Firebase для регистрации, авторизации и push-уведомлений.
 
-## Getting Started
+## Установка необходимых инструментов
 
-This project is a starting point for a Flutter application.
+Перед началом убедитесь, что у вас установлены:
 
-A few resources to get you started if this is your first Flutter project:
+- **Flutter**: [Инструкция по установке](https://flutter.dev/docs/get-started/install)
+- **Dart** (устанавливается вместе с Flutter)
+- **Git**: [Скачать Git](https://git-scm.com/downloads)
+- **Android Studio** (для работы с Android) или **Xcode** (для iOS)
+- **Firebase CLI** (для работы с Firebase, [установка здесь](https://firebase.google.com/docs/cli))
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Проверьте, что Flutter установлен корректно:
+flutter doctor
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Клонирование репозитория
+
+Склонируйте проект с GitHub и перейдите в его папку:
+
+git clone https://github.com/DiMM2021/chatter.git
+cd chatter
+
+## Установка зависимостей
+flutter pub get
+
+## Архитектура проекта
+- **lib/** — основная папка с кодом приложения (для Flutter)
+  - **api/** — работа с Firebase для push-уведомлений
+  - **blocs/** — управление состоянием с помощью BLoC
+  - **error/** — ошибки для пользователя Firebase
+  - **models/** — модель для взаимодействия с Hive
+  - **router/** — роуты 
+  - **screens/** — экраны для взаимодействия с пользователем 
+  - **theme/** — светлая и темная темы, snack-bar
+  - **utils/** — вспомогательные функции
+  - **widgets/** — виджеты
+
+## Запуск приложения
+flutter run 
+
+
