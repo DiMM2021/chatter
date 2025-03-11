@@ -2,7 +2,7 @@ import 'package:chatter/blocs/audio_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:chat_bubbles/chat_bubbles.dart';
-import 'package:chatter/theme/theme.dart';
+import 'package:chatter/theme/light_theme.dart';
 import 'dart:io';
 import 'audio_bubble.dart';
 

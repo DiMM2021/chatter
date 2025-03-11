@@ -1,5 +1,5 @@
 
-import 'package:chatter/theme/theme.dart';
+import 'package:chatter/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomInputDecoration {

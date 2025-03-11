@@ -14,7 +14,7 @@ class FirebaseStreamPage extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Scaffold(
-            body: Center(child: Text('Hello')),
+            body: Center(),
           );
         }
         else if (snapshot.connectionState == ConnectionState.waiting) {

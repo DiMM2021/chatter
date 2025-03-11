@@ -1,6 +1,7 @@
 import 'package:chatter/api/firebase_api.dart';
 import 'package:chatter/blocs/audio_cubit.dart';
 import 'package:chatter/blocs/auth_bloc.dart';
+import 'package:chatter/blocs/theme_cubit.dart';
 import 'package:chatter/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
+        BlocProvider(create: (context) => ThemeCubit()),
         BlocProvider(create: (context) => AuthBloc()),
         BlocProvider(create: (context) => AudioCubit()),
         BlocProvider(create: (context) => chatBloc),

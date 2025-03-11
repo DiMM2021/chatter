@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:chatter/blocs/auth_bloc.dart';
-import 'package:chatter/theme/theme.dart';
+import 'package:chatter/theme/light_theme.dart';
 import 'package:chatter/widgets/input_decoration.dart';
 import 'package:chatter/utils/validators.dart';
 import 'package:flutter/material.dart';

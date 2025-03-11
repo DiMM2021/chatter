@@ -4,7 +4,7 @@ import '../blocs/message_bloc.dart';
 import '../widgets/chat_audio.dart';
 import '../widgets/chat_attachment.dart';
 import '../models/message_model.dart';
-import '../theme/theme.dart';
+import '../theme/light_theme.dart';
 
 class ChatInputField extends StatelessWidget {
   final String chatId;
@@ -47,7 +47,6 @@ class ChatInputField extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       decoration: const BoxDecoration(
-        color: Colors.white,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),

@@ -1,46 +1,46 @@
 import 'package:flutter/material.dart';
 
 const Color white = Color(0xFFFFFFFF);
-const Color green = Color(0xFF3CED78);
-const Color darkGreen = Color(0xFF00521C);
-const Color stroke = Color(0xFFEDF2F6);
-const Color black = Color(0xFF2B333E);
-const Color gray = Color(0xFF9DB7CB);
+const Color green = Color(0xFF00C853); 
+const Color darkGreen = Color(0xFF66BB6A);
+const Color stroke = Color(0xFF1E1E1E);
+const Color black = Color(0xFF121212); 
+const Color gray = Color(0xFFB0BEC5); 
 const Color darkBlack = Color(0xFF000000);
-const Color darkGray = Color(0xFF5E7A90);
-const Color kPrimaryColor = Color(0xFF008080);
-const Color kAccentColor = Color(0xFFFF5722);
-const Color kBackgroundColor = Color(0xFFFAFAFA);
-const Color kTextColor = Color(0xFF37474F);
-const Color kIconHighlightColor = Color(0xFFCDDC39);
+const Color darkGray = Color(0xFF78909C); 
+const Color kPrimaryColor = Color(0xFF004D40); 
+const Color kAccentColor = Color(0xFFFF7043);
+const Color kBackgroundColor = Color(0xFF121212); 
+const Color kTextColor = Color(0xFFE0E0E0);
+const Color kIconHighlightColor = Color(0xFFFFC107); 
 
-final ThemeData chatTheme = ThemeData(
+final ThemeData darkTheme = ThemeData(
   fontFamily: 'Gilroy',
-  brightness: Brightness.light,
-  primaryColor: green,
-  scaffoldBackgroundColor: white,
+  brightness: Brightness.dark,
+  primaryColor: darkGreen,
+  scaffoldBackgroundColor: black,
   canvasColor: stroke,
   appBarTheme: AppBarTheme(
-    backgroundColor: Colors.white,
+    backgroundColor: darkBlack,
   ),
   textTheme: TextTheme(
     titleLarge:
-        TextStyle(fontSize: 32, fontWeight: FontWeight.w600, color: black),
+        TextStyle(fontSize: 32, fontWeight: FontWeight.w600, color: white),
     titleMedium:
-        TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: white),
+        TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: gray),
     labelLarge:
         TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: gray),
     labelMedium:
-        TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: darkBlack),
+        TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: white),
     labelSmall:
-        TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: darkGray),
+        TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: gray),
     displayMedium:
         TextStyle(fontSize: 30, fontWeight: FontWeight.w600, color: white),
   ),
-  iconTheme: IconThemeData(color: black),
+  iconTheme: IconThemeData(color: gray),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: stroke,
+      backgroundColor: darkGreen,
       foregroundColor: black,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ),
@@ -58,7 +58,11 @@ final ThemeData chatTheme = ThemeData(
     ),
   ),
   cardTheme: CardTheme(
-    color: green,
+    color: darkGreen,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ),
 );
+
+
+
+
