@@ -1,5 +1,5 @@
 import 'package:chatter/models/chat_model.dart';
-import 'package:chatter/theme/theme.dart';
+import 'package:chatter/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../screens/chat_screen.dart';
@@ -37,15 +37,19 @@ class ChatListTile extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelSmall,
                 children: [
                   if (chat.lastMessage.startsWith("Вы: "))
-                    const TextSpan(
+                    TextSpan(
                       text: "Вы: ",
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black),
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).textTheme.labelSmall?.color,
+                      ),
                     ),
                   TextSpan(
                     text: chat.lastMessage.replaceFirst("Вы: ", ""),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.normal, color: Colors.black54),
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      color: Theme.of(context).textTheme.labelSmall?.color,
+                    ),
                   ),
                 ],
               ),

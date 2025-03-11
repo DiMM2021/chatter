@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:chatter/theme/theme.dart';
+import 'package:chatter/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:path_provider/path_provider.dart';

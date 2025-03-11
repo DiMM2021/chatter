@@ -1,6 +1,7 @@
+import 'package:chatter/widgets/toggle_theme.dart';
 import 'package:flutter/material.dart';
 import '../widgets/search_bar.dart';
-import '../theme/theme.dart';
+import '../theme/light_theme.dart';
 import '../widgets/logout_button.dart'; 
 
 class ChatAppBar extends StatelessWidget {
@@ -22,8 +23,9 @@ class ChatAppBar extends StatelessWidget {
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
-      actions: const [
-        LogoutButton(), // Добавил кнопку выхода
+      actions: [
+        LogoutButton(), 
+        ToggleTheme(),
       ],
       floating: true,
       pinned: true,

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:chatter/blocs/auth_bloc.dart';
 import 'package:chatter/router/app_router.dart';
-import 'package:chatter/theme/theme.dart';
+import 'package:chatter/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
