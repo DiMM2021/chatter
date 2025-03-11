@@ -1,3 +1,4 @@
+import 'package:chatter/api/firebase_api.dart';
 import 'package:chatter/blocs/audio_cubit.dart';
 import 'package:chatter/blocs/auth_bloc.dart';
 import 'package:chatter/firebase_options.dart';
@@ -12,10 +13,12 @@ import 'package:chatter/blocs/chat_bloc.dart';
 import 'package:chatter/blocs/message_bloc.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); 
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-  options: DefaultFirebaseOptions.currentPlatform,
-);
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await FirebaseApi().initNotifications();
+
   await Hive.initFlutter();
 
   if (!Hive.isAdapterRegistered(0)) {
@@ -24,7 +27,6 @@ void main() async {
   if (!Hive.isAdapterRegistered(1)) {
     Hive.registerAdapter(MessageAdapter());
   }
-
 
   final chatBox = await Hive.openBox<Chat>('chats');
   final messageBox = await Hive.openBox<Message>('messages');
